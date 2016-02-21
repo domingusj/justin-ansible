@@ -1,0 +1,6 @@
+[dns-servers]
+core1.dev.den.justindomingus.com
+core2.dev.den.justindomingus.com
+
+[semaphore-servers]
+semaphore1.dev.den.justindomingus.com
