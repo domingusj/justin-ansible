@@ -14,3 +14,13 @@
   ram: 1024
   cpu: 1
   ip: 10.0.0.5
+- name: sensu1
+  box: ubuntu/trusty64
+  ram: 1024
+  cpu: 1
+  ip: 10.0.0.6
+- name: docker1
+  box: ubuntu/trusty64
+  ram: 1024
+  cpu: 1
+  ip: 10.0.0.7
