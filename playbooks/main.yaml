@@ -1,6 +1,0 @@
----
-- name: provision vagrant boxes
-  hosts: all
-  sudo: yes
-  roles:
-    - vagrant

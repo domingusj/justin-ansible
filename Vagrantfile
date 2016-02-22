@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.cpus = servers["cpu"]
       end
       srv.vm.provision "ansible" do |ansible|
-        ansible.playbook = "playbooks/main.yml"
+        ansible.playbook = "playbooks/site.yml"
       end
     end
   end
