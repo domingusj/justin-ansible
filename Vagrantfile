@@ -24,6 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         v.memory = servers["ram"]
         v.cpus = servers["cpus"]
       end
+      config.vm.provision "shell", inline: "sudo apt-get install -y ansible"
     end
   end
 end
