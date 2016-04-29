@@ -18,11 +18,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   servers.each do |servers|
     config.vm.define servers["name"] do |srv|
       srv.vm.box = servers["box"]
+      srv.vm.hostname = servers["name"]
       srv.vm.network "private_network", ip: servers["ip"]
-      srv.vm.provider :virtualbox do |v|
-        v.name = servers["name"]
-        v.memory = servers["ram"]
-        v.cpus = servers["cpus"]
+      srv.vm.provider :virtualbox do |vm|
+        vm.name = servers["name"]
+        vm.memory = servers["ram"]
+        vm.cpus = servers["cpus"]
       end
       config.vm.provision "shell", inline: "sudo apt-get install -y ansible"
     end
