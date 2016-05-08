@@ -13,7 +13,7 @@ servers = YAML.load_file('servers.yaml')
  
 # Create boxes
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
- 
+  config.landrush.enabled = true
   # Iterate through entries in YAML file
   servers.each do |servers|
     config.vm.define servers["name"] do |srv|
@@ -25,6 +25,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vm.memory = servers["ram"]
         vm.cpus = servers["cpus"]
       end
+      config.landrush.tld = "dev.den.justindomingus.com"
+#      config.dns.patterns = [/^.*dev.den.justindomingus.com$/]
       config.vm.provision "shell", inline: "sudo apt-get install -y ansible"
     end
   end
