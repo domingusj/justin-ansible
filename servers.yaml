@@ -11,7 +11,7 @@
   cpus: 1
   ip: 10.0.0.3
 
-- name: dns.dev.den.justindomingus.com
+- name: dns2.dev.den.justindomingus.com
   box: ubuntu/trusty64
   ram: 1024
   cpus: 1

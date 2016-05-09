@@ -1,17 +1,14 @@
 [dns-servers]
-dns1.dev.den.justindomingus.com
-dns2.dev.den.justindomingus.com
+dns[1:2].dev.den.justindomingus.com
 
 [semaphore-servers]
 semaphore1.dev.den.justindomingus.com
 
 [web-servers]
-web1.dev.den.justindomingus.com
-web2.dev.den.justindomingus.com
+web[1:2].dev.den.justindomingus.com
 
 [haproxy-servers]
-haproxy1.dev.den.justindomingus.com
-haproxy2.dev.den.justindomingus.com
+haproxy[1:2].dev.den.justindomingus.com
 
 [sensu-servers]
 sensu1.dev.den.justindomingus.com
