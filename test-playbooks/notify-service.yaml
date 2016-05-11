@@ -1,0 +1,12 @@
+--- # notify test playbook
+
+- hosts: semaphore-servers
+  user: vagrant
+  sudo: yes
+  tasks:
+    - name: Install Apache Web Server
+      action: apt name=apache2 state=installed
+      notify: Restart apache2
+  handlers:
+    - name: Restart apache2
+      action: service name=apache2 state=restarted

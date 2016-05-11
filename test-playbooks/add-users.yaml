@@ -1,0 +1,11 @@
+--- # Add users
+- hosts: dns-servers
+  user: vagrant
+  sudo: yes
+  tasks:
+  - name: Add a list of users
+    user: name={{ item }} state=present
+    with_items:
+      - user1
+      - user2
+      - user3
