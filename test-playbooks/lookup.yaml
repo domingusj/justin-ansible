@@ -1,0 +1,7 @@
+--- # LOOKUP PLAYBOOK EXAMPLE
+- hosts: dns-servers
+  user: vagrant
+  sudo: yes
+  gather_facts: no
+  tasks:
+    - debug: msg="{{ lookup('env','HOME') }} is the value listed"
